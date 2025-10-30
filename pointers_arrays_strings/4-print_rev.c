@@ -1,21 +1,20 @@
-#include <stdio.h>
 #include "main.h"
-
 /**
- * print_most_numbers - Entry point
- *
- * Description: prints the numbers, from 0 to 9, followed by a new line
- *
+ * print_rev - Prints a string, in reverse, followed by a new line
+ * @s: string to print
  */
-void print_most_numbers(void)
+void print_rev(char *s)
 {
-	int c = 0;
+	int i = 0;
 
-	while (c <= 9)
+	while (s[i] != '\0')
 	{
-		if (c != 2 && c != 4)
-			_putchar(c + '0');
-		c++;
+		i++;
+	}
+	while (i > 0)
+	{
+		i--;
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }
